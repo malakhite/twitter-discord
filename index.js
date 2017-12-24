@@ -9,11 +9,12 @@ let keys = config.keys;
 let twitter =  new Twitter(keys);
 let hook = new Discord.WebhookClient(config.discord.id, config.discord.token);
 
-twitter.debug(function (reqObj) {
-    require('request-debug')(reqObj, function (type, data, req) {
-        console.log(type, data, req);
-    });
-});
+// Uncomment for verbose debugging
+// twitter.debug(function (reqObj) {
+//     require('request-debug')(reqObj, function (type, data, req) {
+//         console.log(type, data, req);
+//     });
+// });
 
 twitter.stream('statuses/filter', {
     follow: config.users
@@ -48,9 +49,10 @@ twitter.on('connection error unknown', function() {
 });
 
 twitter.on('data', function(obj) {
-    console.log(obj.user.screen_name, 'says', obj.text);
+    //console.log(obj.user.screen_name, 'says', obj.text);
+    var message = obj.text + '\n[View Tweet](https://twitter.com/' + obj.user.screen_name + '/status/' + obj.id_str + ')';
     hook.send(
-        obj.text, {
+        message, {
             username : obj.user.screen_name
         }
     );
