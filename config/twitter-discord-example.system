@@ -1,0 +1,17 @@
+[Unit]
+Description = twitter-discord - A simple script to send tweets to discord
+Documentation = https://github.com/
+After = network.target
+
+[Service]
+Environment = TWITTER_CONSUMER_KEY='your_key_here'
+Environment = TWITTER_CONSUMER_SECRET='your_secret_here'
+Environment = TWITTER_ACCESS_TOKEN_KEY='your_access_token_key_here'
+Environment = TWITTER_ACCESS_TOKEN_SECRET='your_access_token_secret_here'
+Type = simple
+User = unprivileged_user
+ExecStart = /path/to/node /path/to/twitter-discord/index.js
+Restart = on-failure
+
+[Install]
+WantedBy = multi-user.target

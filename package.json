@@ -1,0 +1,17 @@
+{
+  "name": "twitter-discord",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^11.2.1",
+    "request-debug": "^0.2.0",
+    "twitter-stream-api": "^0.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
