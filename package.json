@@ -1,7 +1,7 @@
 {
   "name": "twitter-discord",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple script to send Twitter updates to a discord channel",
   "main": "index.js",
   "dependencies": {
     "discord.js": "^11.2.1",
@@ -12,6 +12,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Scott Abbey",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malakhite/twitter-discord.git"
+  },
+  "keywords": [
+    "twitter",
+    "discord",
+    "nodejs"
+  ],
+  "bugs": {
+    "url": "https://github.com/malakhite/twitter-discord/issues"
+  },
+  "homepage": "https://github.com/malakhite/twitter-discord#readme"
 }

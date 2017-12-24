@@ -13,4 +13,12 @@ config.users = [
     // A comma separated list of users to follow.
 ];
 
+
+// Same goes here: either use the environment variable below for your Discord
+// webhook, or replace the variables with the actual id and token
+config.discord = {
+    id: process.env.DISCORD_CHANNEL_ID,
+    token: process.env.DISCORD_CHANNEL_TOKEN
+};
+
 module.exports = config;

@@ -7,7 +7,7 @@ const config = require('./config/config');
 let keys = config.keys;
 
 let twitter =  new Twitter(keys);
-let hook = new Discord.WebhookClient('390656353099579402', 'qvDhFTwzqTpSZnb8cOQ8ycJu72jea9AdEjHFvZJTmMXbJJWBfCNB1GmmOrn4zKMFJX5m');
+let hook = new Discord.WebhookClient(config.discord.id, config.discord.token);
 
 twitter.debug(function (reqObj) {
     require('request-debug')(reqObj, function (type, data, req) {
